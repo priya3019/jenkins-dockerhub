@@ -3,7 +3,7 @@ pipeline{
 	agent {label 'linux'}
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('f4a08105-5359-40b8-8071-b6f38e7ee321')
+		DOCKERHUB_CREDENTIALS=credentials('1605724c-b81e-476f-9dbb-f1f9866f059b')
 	}
 
 	stages {
