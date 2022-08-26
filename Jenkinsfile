@@ -3,7 +3,7 @@ pipeline{
 	agent {label 'linux'}
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('dockerhub')
+		DOCKERHUB_CREDENTIALS=credentials('f4a08105-5359-40b8-8071-b6f38e7ee321')
 	}
 
 	stages {
@@ -11,14 +11,14 @@ pipeline{
 	    stage('gitclone') {
 
 			steps {
-				git 'https://github.com/shazforiot/nodeapp_test.git'
+				git 'https://github.com/priya3019/jenkins-dockerhub.git'
 			}
 		}
 
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t thetips4you/nodeapp_test:latest .'
+				sh 'docker build -t priyappatil/nodeapp_test:latest .'
 			}
 		}
 
@@ -32,7 +32,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push thetips4you/nodeapp_test:latest'
+				sh 'docker push priyappatil/nodeapp_test:latest'
 			}
 		}
 	}
